@@ -1,4 +1,4 @@
-class Patient
+class Patient#waiter
 
   attr_accessor :name #,:appointment, :doctor
 
@@ -13,19 +13,19 @@ class Patient
     @@all
   end
 
-  def new_appointment(doctor,date)#<<
-      Appointment.new(self,doctor,date)
-  end
-
-  def appointments#>>
+  def appointments#>>meals
       Appointment.all.select do |appointment|
       appointment.doctor
     end
   end
 
-   def doctors#<<
+   def doctors#<<customer
       appointments.map do |appointment|
       appointment.doctor == self
    end
+ end
+ 
+ def new_appointment(doctor,date)#<<
+     Appointment.new(self,doctor,date)
  end
 end
