@@ -25,8 +25,8 @@ class Doctor#Customer
    end
  end
 
- def new_appointment(patient, date)#<<
-     Appointment.new(patient, self, date)
+ def new_appointment(date,patient)#<<
+     Appointment.new(self,patient,date)
  end
 
 end
