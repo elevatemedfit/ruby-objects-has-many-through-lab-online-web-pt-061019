@@ -15,13 +15,13 @@ class Patient#waiter
 
   def appointments#>>meals
       Appointment.all.select do |appointment|
-      appointment.patient
+      appointment.patient == self
     end
   end
 
    def doctors#<<customer
       appointments.map do |appointment|
-      appointment.doctor == self
+      appointment.doctor 
    end
  end
 
