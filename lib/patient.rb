@@ -13,7 +13,7 @@ class Patient
     @@all
   end
 
-  def new_appointment(doctor,date)
+  def new_appointment(doctor,date)#<<
       Appointment.new(self,doctor,date)
   end
 
@@ -23,7 +23,7 @@ class Patient
     end
   end
 
-   def doctors
+   def doctors#<<
       appointments.map do |appointment|
       appointment.doctor == self
    end
