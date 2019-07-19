@@ -15,7 +15,7 @@ class Patient#waiter
 
   def appointments#>>meals
       Appointment.all.select do |appointment|
-      appointment.doctor
+      appointment.patient
     end
   end
 
