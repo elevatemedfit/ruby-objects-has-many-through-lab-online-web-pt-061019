@@ -14,18 +14,18 @@ class Doctor
   end
 
   def new_appointment(patient, date)
-      appointment = Appointment.new(patient,self,date) 
+      appointment = Appointment.new(patient,self,date)
   end
 
-  def appointments
+  def appointments#meals
       Appointment.all.select do |appointment|
       appointment.doctor == self
     end
   end
 
-   def patients
+   def patients#waiters
       appointments.map do |appointment|
-      appointment.patients
+      appointment.patient
    end
  end
 end
