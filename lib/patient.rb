@@ -21,7 +21,7 @@ class Patient#waiter
 
    def doctors#<<customer
       appointments.map do |appointment|
-      appointment.doctor == self
+      appointment.patient == self
    end
  end
 
