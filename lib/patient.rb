@@ -24,8 +24,8 @@ class Patient#waiter
       appointment.doctor == self
    end
  end
- 
+
  def new_appointment(doctor,date)#<<
-     Appointment.new(self,doctor,date)
+     Appointment.new(doctor,date,self)
  end
 end
